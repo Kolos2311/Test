@@ -1,0 +1,11 @@
+{
+  "dataset": "BTCUSD-bitstamp",
+  "baseline_wr": 0.20571995092781034,
+  "variants": 230,
+  "median_wr": 0.21503244993075366,
+  "share_above_base": 0.6782608695652174,
+  "share_above_base_every_year": 0.1826086956521739,
+  "share_net_positive": 0.0,
+  "best_wr": 0.24627606752730885,
+  "pooled_wr": 0.215562207357422
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "rank": 1,
+    "timeframe": "15min",
+    "conditions": [
+      "close>EMA50",
+      "RSI2<10",
+      "Stoch K<10",
+      "MFI<20"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 2,
+    "timeframe": "15min",
+    "conditions": [
+      "RSI2<5",
+      "long lower wick",
+      "ADX<20",
+      "4h close>EMA50"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 3,
+    "timeframe": "15min",
+    "conditions": [
+      "Supertrend flip",
+      "ADX>25",
+      "ATR% bottom 20%",
+      "weekend"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 4,
+    "timeframe": "5min",
+    "conditions": [
+      "z50<-3",
+      "ADX<20",
+      "weekend",
+      "1h Supertrend up"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 5,
+    "timeframe": "4h",
+    "conditions": [
+      "MACD>signal",
+      "close>BB upper (breakout)",
+      "OBV>EMA20(OBV)",
+      "volume >3x avg"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  }
+]
