@@ -1,0 +1,62 @@
+[
+  {
+    "rank": 1,
+    "timeframe": "15min",
+    "conditions": [
+      "RSI14>60 (momentum)",
+      "long lower wick",
+      "BB squeeze (width bottom 10%)",
+      "1h Supertrend up"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 2,
+    "timeframe": "30min",
+    "conditions": [
+      "EMA20>EMA50>EMA200",
+      "RSI14<30",
+      "CCI<-200",
+      "z50<-2"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 3,
+    "timeframe": "30min",
+    "conditions": [
+      "RSI2<10",
+      "CCI<-200",
+      "BB squeeze (width bottom 10%)",
+      "session US 13-21 UTC"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 4,
+    "timeframe": "30min",
+    "conditions": [
+      "Stoch K x D in OS",
+      "close<Keltner lower",
+      "z50<-2",
+      "weekend"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 5,
+    "timeframe": "15min",
+    "conditions": [
+      "PSAR up",
+      "close<Keltner lower",
+      "close<EMA20",
+      "session late 21-24 UTC"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  }
+]

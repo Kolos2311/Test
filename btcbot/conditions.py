@@ -146,10 +146,11 @@ def build(df: pd.DataFrame, htf: dict[str, pd.DataFrame] | None = None) -> list[
         (upper_wick > 2 * body) & (upper_wick > 0.5 * a14))
 
     # --- order flow / volume ---
-    B.d("taker buy >55%", "taker", tbr > 0.55, tbr < 0.45)
-    B.d("taker buy >60%", "taker", tbr > 0.60, tbr < 0.40)
-    B.d("taker buy 3-bar >55%", "taker3", tbr3 > 0.55, tbr3 < 0.45)
-    B.d("taker buy <42% (exhaustion)", "taker_contra", tbr < 0.42, tbr > 0.58)
+    if df["taker_buy_volume"].notna().any():
+        B.d("taker buy >55%", "taker", tbr > 0.55, tbr < 0.45)
+        B.d("taker buy >60%", "taker", tbr > 0.60, tbr < 0.40)
+        B.d("taker buy 3-bar >55%", "taker3", tbr3 > 0.55, tbr3 < 0.45)
+        B.d("taker buy <42% (exhaustion)", "taker_contra", tbr < 0.42, tbr > 0.58)
     B.d("OBV>EMA20(OBV)", "obv", ob > ob_e, ob < ob_e)
 
     # --- non-directional regime / context ---

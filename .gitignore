@@ -1,4 +1,8 @@
 data/
+state/
+bots.log
 __pycache__/
 *.pyc
 .pytest_cache/
+.env
+reports/**/candidates_train.csv

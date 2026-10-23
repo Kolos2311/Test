@@ -1,0 +1,268 @@
+{
+  "dataset": "BTCUSD-bitstamp-null2",
+  "data_from": "2019-10-01 00:00:00+00:00",
+  "data_to": "2026-10-23 02:01:00+00:00",
+  "bars_1m": 3713882,
+  "periods": {
+    "train": [
+      "2020-01-01",
+      "2024-01-01"
+    ],
+    "val": [
+      "2024-01-01",
+      "2025-01-01"
+    ],
+    "test": [
+      "2025-01-01",
+      "2100-01-01"
+    ]
+  },
+  "timeframes": [
+    "5min",
+    "15min",
+    "30min",
+    "1h",
+    "4h"
+  ],
+  "combinations_screened": 409988,
+  "candidates_simulated": 10278,
+  "baseline": {
+    "train": {
+      "long_wr": 0.20465862422997946,
+      "short_wr": 0.20752386113012397,
+      "minutes": 2103840
+    },
+    "val": {
+      "long_wr": 0.19797738312082575,
+      "short_wr": 0.21039959016393442,
+      "minutes": 527040
+    },
+    "test": {
+      "long_wr": 0.2041201142301565,
+      "short_wr": 0.2100829900845476,
+      "minutes": 950522
+    }
+  },
+  "yearly": {
+    "0": [
+      {
+        "year": 2020,
+        "trades": 11,
+        "win_rate": 0.2727272727272727,
+        "sum_gross_pct": 0.9999999776482582
+      },
+      {
+        "year": 2021,
+        "trades": 13,
+        "win_rate": 0.6153846153846154,
+        "sum_gross_pct": 6.749999849125743
+      },
+      {
+        "year": 2022,
+        "trades": 17,
+        "win_rate": 0.29411764705882354,
+        "sum_gross_pct": 1.9999999552965164
+      },
+      {
+        "year": 2023,
+        "trades": 21,
+        "win_rate": 0.38095238095238093,
+        "sum_gross_pct": 4.7499998938292265
+      },
+      {
+        "year": 2024,
+        "trades": 30,
+        "win_rate": 0.43333333333333335,
+        "sum_gross_pct": 8.74999980442226
+      },
+      {
+        "year": 2025,
+        "trades": 13,
+        "win_rate": 0.23076923076923078,
+        "sum_gross_pct": 0.4999999888241291
+      },
+      {
+        "year": 2026,
+        "trades": 17,
+        "win_rate": 0.23529411764705882,
+        "sum_gross_pct": 0.7499999832361937
+      }
+    ],
+    "1": [
+      {
+        "year": 2020,
+        "trades": 46,
+        "win_rate": 0.3695652173913043,
+        "sum_gross_pct": 9.749999782070518
+      },
+      {
+        "year": 2021,
+        "trades": 35,
+        "win_rate": 0.2,
+        "sum_gross_pct": 0.0
+      },
+      {
+        "year": 2022,
+        "trades": 26,
+        "win_rate": 0.4230769230769231,
+        "sum_gross_pct": 7.249999837949872
+      },
+      {
+        "year": 2023,
+        "trades": 25,
+        "win_rate": 0.44,
+        "sum_gross_pct": 7.499999832361937
+      },
+      {
+        "year": 2024,
+        "trades": 24,
+        "win_rate": 0.375,
+        "sum_gross_pct": 5.249999882653356
+      },
+      {
+        "year": 2025,
+        "trades": 27,
+        "win_rate": 0.18518518518518517,
+        "sum_gross_pct": -0.4999999888241291
+      },
+      {
+        "year": 2026,
+        "trades": 22,
+        "win_rate": 0.09090909090909091,
+        "sum_gross_pct": -2.9999999329447746
+      }
+    ],
+    "2": [
+      {
+        "year": 2020,
+        "trades": 26,
+        "win_rate": 0.5,
+        "sum_gross_pct": 9.749999782070518
+      },
+      {
+        "year": 2021,
+        "trades": 27,
+        "win_rate": 0.48148148148148145,
+        "sum_gross_pct": 9.499999787658453
+      },
+      {
+        "year": 2022,
+        "trades": 45,
+        "win_rate": 0.26666666666666666,
+        "sum_gross_pct": 3.7499999161809683
+      },
+      {
+        "year": 2023,
+        "trades": 44,
+        "win_rate": 0.25,
+        "sum_gross_pct": 2.74999993853271
+      },
+      {
+        "year": 2024,
+        "trades": 55,
+        "win_rate": 0.3090909090909091,
+        "sum_gross_pct": 7.499999832361937
+      },
+      {
+        "year": 2025,
+        "trades": 46,
+        "win_rate": 0.13043478260869565,
+        "sum_gross_pct": -3.999999910593033
+      },
+      {
+        "year": 2026,
+        "trades": 32,
+        "win_rate": 0.34375,
+        "sum_gross_pct": 5.749999871477485
+      }
+    ],
+    "3": [
+      {
+        "year": 2020,
+        "trades": 54,
+        "win_rate": 0.2037037037037037,
+        "sum_gross_pct": 0.24999999441206455
+      },
+      {
+        "year": 2021,
+        "trades": 34,
+        "win_rate": 0.29411764705882354,
+        "sum_gross_pct": 3.999999910593033
+      },
+      {
+        "year": 2022,
+        "trades": 32,
+        "win_rate": 0.5625,
+        "sum_gross_pct": 14.499999675899744
+      },
+      {
+        "year": 2023,
+        "trades": 38,
+        "win_rate": 0.3157894736842105,
+        "sum_gross_pct": 5.49999987706542
+      },
+      {
+        "year": 2024,
+        "trades": 32,
+        "win_rate": 0.375,
+        "sum_gross_pct": 6.9999998435378075
+      },
+      {
+        "year": 2025,
+        "trades": 42,
+        "win_rate": 0.2619047619047619,
+        "sum_gross_pct": 3.249999927356839
+      },
+      {
+        "year": 2026,
+        "trades": 32,
+        "win_rate": 0.21875,
+        "sum_gross_pct": 0.7499999832361937
+      }
+    ],
+    "4": [
+      {
+        "year": 2020,
+        "trades": 21,
+        "win_rate": 0.5238095238095238,
+        "sum_gross_pct": 8.499999810010195
+      },
+      {
+        "year": 2021,
+        "trades": 17,
+        "win_rate": 0.29411764705882354,
+        "sum_gross_pct": 1.9999999552965164
+      },
+      {
+        "year": 2022,
+        "trades": 28,
+        "win_rate": 0.25,
+        "sum_gross_pct": 1.7499999608844519
+      },
+      {
+        "year": 2023,
+        "trades": 25,
+        "win_rate": 0.32,
+        "sum_gross_pct": 3.7499999161809683
+      },
+      {
+        "year": 2024,
+        "trades": 24,
+        "win_rate": 0.375,
+        "sum_gross_pct": 5.249999882653356
+      },
+      {
+        "year": 2025,
+        "trades": 17,
+        "win_rate": 0.17647058823529413,
+        "sum_gross_pct": -0.4999999888241291
+      },
+      {
+        "year": 2026,
+        "trades": 11,
+        "win_rate": 0.2727272727272727,
+        "sum_gross_pct": 0.9999999776482582
+      }
+    ]
+  }
+}

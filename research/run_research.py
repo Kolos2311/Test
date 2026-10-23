@@ -104,14 +104,18 @@ def minute_bounds(idx: pd.DatetimeIndex, period: str) -> tuple[int, int]:
 
 
 def run_combo(fr: Frame, row, out: Outcomes, idx: pd.DatetimeIndex, period: str):
+    return run_combo_between(fr, row, out, *minute_bounds(idx, period))
+
+
+def run_combo_between(fr: Frame, row, out: Outcomes, vf: int, vt: int):
     lg, sh = combo_mask(row, fr.conds)
-    vf, vt = minute_bounds(idx, period)
     return simulate(fr.entry_min, lg, sh, out, vf, vt)
 
 
-def screen_frame(fr: Frame) -> tuple[np.ndarray, int]:
-    """Pick candidate combinations for one timeframe from train data only."""
-    train = period_mask(fr.index, "train") & fr.sample
+def screen_frame(fr: Frame, train: np.ndarray | None = None) -> tuple[np.ndarray, int]:
+    """Pick candidate combinations for one timeframe from the bars in `train`
+    (default: the train period)."""
+    train = (period_mask(fr.index, "train") if train is None else train) & fr.sample
     combos = enumerate_combos(fr.conds, 3)
     cnt = screen(combos, fr.conds, train, fr.win_long, fr.win_short)
     n_screened = len(combos)
@@ -145,17 +149,19 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--timeframes", default=",".join(TIMEFRAMES))
     ap.add_argument("--out", default="reports")
+    ap.add_argument("--data", default="BTCUSDT",
+                    help="dataset name in data/: BTCUSDT (Binance futures) or BTCUSD-bitstamp")
     ap.add_argument("--null-seed", type=int, default=None,
                     help="run on sign-randomized data (no real edge) to measure selection bias")
     args = ap.parse_args()
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    df1m = data.load()
-    tag = "real"
+    df1m = data.load(args.data)
+    tag = args.data
     if args.null_seed is not None:
         df1m = data.sign_randomized(df1m, args.null_seed)
-        tag = f"null{args.null_seed}"
+        tag = f"{args.data}-null{args.null_seed}"
     idx = df1m.index
     print(f"[{tag}] 1m bars: {len(df1m):,}  {idx[0]} .. {idx[-1]}")
     out = load_outcomes(df1m, tag)

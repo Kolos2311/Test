@@ -1,0 +1,61 @@
+[
+  {
+    "rank": 1,
+    "timeframe": "15min",
+    "conditions": [
+      "EMA9>EMA21",
+      "Stoch K x D in OS",
+      "MFI<20"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 2,
+    "timeframe": "15min",
+    "conditions": [
+      "Supertrend flip",
+      "Donchian55 breakout",
+      "weekday",
+      "1D close>EMA50"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 3,
+    "timeframe": "15min",
+    "conditions": [
+      "RSI14 x up 30",
+      "close<BB lower",
+      "close<Keltner lower",
+      "squeeze release"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 4,
+    "timeframe": "1h",
+    "conditions": [
+      "close above Ichimoku cloud",
+      "RSI2<5",
+      "close<VWAP-1ATR",
+      "weekend"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  },
+  {
+    "rank": 5,
+    "timeframe": "1h",
+    "conditions": [
+      "EMA50 rising(10)",
+      "close<VWAP-1ATR",
+      "session late 21-24 UTC",
+      "weekend"
+    ],
+    "take_profit_pct": 1.0,
+    "stop_loss_pct": 0.25
+  }
+]

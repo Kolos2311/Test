@@ -9,9 +9,9 @@ from scipy import stats
 
 from .engine import LOSS, TIMEOUT, WIN, Trades
 
-# Binance USDT-M futures, regular account: taker 0.05%, maker 0.02% per side.
-FEE_TAKER_RT = 0.10   # % round trip, market entry + market/stop exit
-FEE_MAKER_RT = 0.04   # % round trip, limit entry + limit TP (SL would still be taker)
+# Hyperliquid perps, base tier: taker 0.045%, maker 0.015% per side.
+FEE_TAKER_RT = 0.09   # % round trip, market entry + market/stop exit
+FEE_MAKER_RT = 0.03   # % round trip, limit entry + limit TP (SL would still be taker)
 
 
 def wilson(wins: int, n: int, z: float = 1.96) -> tuple[float, float]:

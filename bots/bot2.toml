@@ -1,0 +1,33 @@
+# bot2: 15min +DI>-DI + >=4 down closes + BB squeeze (width bottom 10%) + 1D RSI>50
+# CONFIRMED before the selection window: WR 28.8% on 111 trades, p = 0.0223 (baseline 20.4%)
+# Picked by research/select_live.py on 2026-10-23 from data 2024-10-23 .. 2026-10-23.
+# Training-window win rate is optimistic (selection bias); the walk-forward
+# out-of-sample win rate of this procedure was 22.9% (see reports/RESULTS.md).
+name = "bot2"
+mode = "paper"            # paper -> testnet -> mainnet (mainnet also needs HL_CONFIRM_MAINNET=yes)
+coin = "BTC"
+timeframe = "15min"
+conditions = ["+DI>-DI", ">=4 down closes", "BB squeeze (width bottom 10%)", "1D RSI>50"]
+take_profit_pct = 1.0
+stop_loss_pct = 0.25
+notional_usd = 20.0       # position value in USD (Hyperliquid minimum order is 10 USD)
+leverage = 5
+isolated = true
+max_notional_usd = 200.0
+entry_slippage_pct = 0.3
+max_daily_loss_usd = 5.0
+max_consecutive_losses = 12
+subaccount_address = ""   # testnet/mainnet with several bots: one sub-account per bot ...
+secret_env = "HL_SECRET_KEY"          # ... or a separate wallet per bot: point these to its own variables
+account_env = "HL_ACCOUNT_ADDRESS"
+state_dir = "state"
+
+[backtest]
+train_from = "2024-10-23"
+train_to = "2026-10-23"
+train_trades = 51
+train_win_rate = 0.3922
+train_half_year_win_rates = [0.357, 0.556, 0.364, 0.353]
+history_by_year = { "2020" = [22, 0.409], "2021" = [20, 0.25], "2022" = [30, 0.233], "2023" = [20, 0.3], "2024" = [24, 0.292], "2025" = [20, 0.4], "2026" = [26, 0.385] }
+pre_sample = { trades = 111, win_rate = 0.2883, baseline_wr = 0.2045, p_value = 0.0223, exp_net_pct = 0.0204 }
+walk_forward_oos_win_rate = 0.2293

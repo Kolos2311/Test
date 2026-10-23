@@ -1,0 +1,280 @@
+[
+  {
+    "bot": "bot1",
+    "tf": "15min",
+    "conditions": [
+      "MFI<20",
+      "BB re-entry",
+      "session late 21-24 UTC"
+    ],
+    "train_trades": 95,
+    "train_wr": 0.4211,
+    "train_half_wr": [
+      0.36,
+      0.469,
+      0.364,
+      0.5
+    ],
+    "history_by_year": {
+      "2020": [
+        47,
+        0.149
+      ],
+      "2021": [
+        35,
+        0.143
+      ],
+      "2022": [
+        56,
+        0.143
+      ],
+      "2023": [
+        50,
+        0.18
+      ],
+      "2024": [
+        62,
+        0.274
+      ],
+      "2025": [
+        57,
+        0.439
+      ],
+      "2026": [
+        23,
+        0.435
+      ]
+    },
+    "pre_sample": {
+      "trades": 235,
+      "win_rate": 0.1745,
+      "baseline_wr": 0.2093,
+      "p_value": 0.9208,
+      "exp_net_pct": -0.1219
+    },
+    "history_net_pct_per_trade": -0.0332
+  },
+  {
+    "bot": "bot2",
+    "tf": "1h",
+    "conditions": [
+      "bull candle",
+      "Williams%R<-90",
+      "ATR% bottom 20%",
+      "weekend"
+    ],
+    "train_trades": 57,
+    "train_wr": 0.386,
+    "train_half_wr": [
+      0.333,
+      0.357,
+      0.429,
+      0.385
+    ],
+    "history_by_year": {
+      "2020": [
+        28,
+        0.107
+      ],
+      "2021": [
+        28,
+        0.25
+      ],
+      "2022": [
+        37,
+        0.162
+      ],
+      "2023": [
+        39,
+        0.205
+      ],
+      "2024": [
+        31,
+        0.194
+      ],
+      "2025": [
+        28,
+        0.393
+      ],
+      "2026": [
+        26,
+        0.385
+      ]
+    },
+    "pre_sample": {
+      "trades": 160,
+      "win_rate": 0.1812,
+      "baseline_wr": 0.2093,
+      "p_value": 0.8339,
+      "exp_net_pct": -0.1134
+    },
+    "history_net_pct_per_trade": -0.0462
+  },
+  {
+    "bot": "bot3",
+    "tf": "30min",
+    "conditions": [
+      "MACD x signal",
+      "3-bar burst >1.5sd",
+      "engulfing",
+      "weekday"
+    ],
+    "train_trades": 86,
+    "train_wr": 0.3605,
+    "train_half_wr": [
+      0.348,
+      0.346,
+      0.438,
+      0.333
+    ],
+    "history_by_year": {
+      "2020": [
+        33,
+        0.091
+      ],
+      "2021": [
+        33,
+        0.182
+      ],
+      "2022": [
+        35,
+        0.257
+      ],
+      "2023": [
+        47,
+        0.277
+      ],
+      "2024": [
+        58,
+        0.172
+      ],
+      "2025": [
+        45,
+        0.4
+      ],
+      "2026": [
+        31,
+        0.355
+      ]
+    },
+    "pre_sample": {
+      "trades": 196,
+      "win_rate": 0.199,
+      "baseline_wr": 0.2093,
+      "p_value": 0.6664,
+      "exp_net_pct": -0.0913
+    },
+    "history_net_pct_per_trade": -0.0297
+  },
+  {
+    "bot": "bot4",
+    "tf": "15min",
+    "conditions": [
+      "close<EMA20",
+      "OBV>EMA20(OBV)",
+      "ATR% top 20%",
+      "weekend"
+    ],
+    "train_trades": 65,
+    "train_wr": 0.3846,
+    "train_half_wr": [
+      0.467,
+      0.333,
+      0.385,
+      0.385
+    ],
+    "history_by_year": {
+      "2020": [
+        106,
+        0.226
+      ],
+      "2021": [
+        177,
+        0.164
+      ],
+      "2022": [
+        56,
+        0.304
+      ],
+      "2023": [
+        28,
+        0.214
+      ],
+      "2024": [
+        52,
+        0.269
+      ],
+      "2025": [
+        38,
+        0.368
+      ],
+      "2026": [
+        21,
+        0.429
+      ]
+    },
+    "pre_sample": {
+      "trades": 413,
+      "win_rate": 0.2131,
+      "baseline_wr": 0.2093,
+      "p_value": 0.4451,
+      "exp_net_pct": -0.0737
+    },
+    "history_net_pct_per_trade": -0.0445
+  },
+  {
+    "bot": "bot5",
+    "tf": "5min",
+    "conditions": [
+      "RSI14<30",
+      "volume >3x avg",
+      "4h RSI<30"
+    ],
+    "train_trades": 101,
+    "train_wr": 0.3762,
+    "train_half_wr": [
+      0.385,
+      0.381,
+      0.417,
+      0.333
+    ],
+    "history_by_year": {
+      "2020": [
+        43,
+        0.07
+      ],
+      "2021": [
+        26,
+        0.231
+      ],
+      "2022": [
+        95,
+        0.168
+      ],
+      "2023": [
+        98,
+        0.224
+      ],
+      "2024": [
+        85,
+        0.212
+      ],
+      "2025": [
+        62,
+        0.355
+      ],
+      "2026": [
+        28,
+        0.357
+      ]
+    },
+    "pre_sample": {
+      "trades": 336,
+      "win_rate": 0.1756,
+      "baseline_wr": 0.2093,
+      "p_value": 0.9462,
+      "exp_net_pct": -0.1205
+    },
+    "history_net_pct_per_trade": -0.0625
+  }
+]
